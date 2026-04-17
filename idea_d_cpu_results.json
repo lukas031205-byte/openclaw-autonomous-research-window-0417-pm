@@ -1,0 +1,474 @@
+{
+  "experiment": "Idea D: Gaussian Noise Perturbation",
+  "noise_levels": [
+    0.0,
+    0.01,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "n_pairs": 25,
+  "n_repetitions_per_pair": 3,
+  "noise_stats_per_level": {
+    "0.0": {
+      "dinov2_l2_mean": 35.51762313842774,
+      "dinov2_l2_std": 1.6107539926560535,
+      "clip_cs_mean": 0.6319981932640075,
+      "clip_cs_std": 0.06824984509460227,
+      "n_pairs": 25
+    },
+    "0.01": {
+      "dinov2_l2_mean": 35.32093200683594,
+      "dinov2_l2_std": 1.5135704291827756,
+      "clip_cs_mean": 0.5930753028392792,
+      "clip_cs_std": 0.06651124727071728,
+      "n_pairs": 25
+    },
+    "0.05": {
+      "dinov2_l2_mean": 34.80869255065918,
+      "dinov2_l2_std": 1.6762788560063053,
+      "clip_cs_mean": 0.6039307236671447,
+      "clip_cs_std": 0.07059771168539915,
+      "n_pairs": 25
+    },
+    "0.1": {
+      "dinov2_l2_mean": 34.128765716552735,
+      "dinov2_l2_std": 1.6094029164245527,
+      "clip_cs_mean": 0.6439081537723541,
+      "clip_cs_std": 0.06694943642143333,
+      "n_pairs": 25
+    },
+    "0.2": {
+      "dinov2_l2_mean": 31.97240623474121,
+      "dinov2_l2_std": 2.0776126668867323,
+      "clip_cs_mean": 0.7249534749984741,
+      "clip_cs_std": 0.05946939595901114,
+      "n_pairs": 25
+    }
+  },
+  "baseline_pairs": [
+    {
+      "pair_idx": 0,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_057.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_048.jpg",
+      "baseline_dinov2_l2": 35.029541015625,
+      "baseline_clip_cs": 0.6642548441886902
+    },
+    {
+      "pair_idx": 1,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_048.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_022.jpg",
+      "baseline_dinov2_l2": 33.074642181396484,
+      "baseline_clip_cs": 0.6998803019523621
+    },
+    {
+      "pair_idx": 2,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_022.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_000.jpg",
+      "baseline_dinov2_l2": 35.978694915771484,
+      "baseline_clip_cs": 0.7009067535400391
+    },
+    {
+      "pair_idx": 3,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_000.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_055.jpg",
+      "baseline_dinov2_l2": 35.76226806640625,
+      "baseline_clip_cs": 0.5929957628250122
+    },
+    {
+      "pair_idx": 4,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_055.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_024.jpg",
+      "baseline_dinov2_l2": 34.47712326049805,
+      "baseline_clip_cs": 0.47618746757507324
+    },
+    {
+      "pair_idx": 5,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_024.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_053.jpg",
+      "baseline_dinov2_l2": 32.24649429321289,
+      "baseline_clip_cs": 0.7250893712043762
+    },
+    {
+      "pair_idx": 6,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_053.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_008.jpg",
+      "baseline_dinov2_l2": 36.29839324951172,
+      "baseline_clip_cs": 0.640402615070343
+    },
+    {
+      "pair_idx": 7,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_008.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_059.jpg",
+      "baseline_dinov2_l2": 34.89570236206055,
+      "baseline_clip_cs": 0.6164182424545288
+    },
+    {
+      "pair_idx": 8,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_059.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_015.jpg",
+      "baseline_dinov2_l2": 37.686180114746094,
+      "baseline_clip_cs": 0.6249120235443115
+    },
+    {
+      "pair_idx": 9,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_015.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_034.jpg",
+      "baseline_dinov2_l2": 34.60942077636719,
+      "baseline_clip_cs": 0.7002451419830322
+    },
+    {
+      "pair_idx": 10,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_034.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_019.jpg",
+      "baseline_dinov2_l2": 35.69734191894531,
+      "baseline_clip_cs": 0.6795434355735779
+    },
+    {
+      "pair_idx": 11,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_019.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_047.jpg",
+      "baseline_dinov2_l2": 36.402862548828125,
+      "baseline_clip_cs": 0.5668129324913025
+    },
+    {
+      "pair_idx": 12,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_047.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_030.jpg",
+      "baseline_dinov2_l2": 36.66108703613281,
+      "baseline_clip_cs": 0.6389656662940979
+    },
+    {
+      "pair_idx": 13,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_030.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_046.jpg",
+      "baseline_dinov2_l2": 33.216243743896484,
+      "baseline_clip_cs": 0.7530199289321899
+    },
+    {
+      "pair_idx": 14,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_046.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_005.jpg",
+      "baseline_dinov2_l2": 35.38109588623047,
+      "baseline_clip_cs": 0.62343430519104
+    },
+    {
+      "pair_idx": 15,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_005.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_025.jpg",
+      "baseline_dinov2_l2": 34.879539489746094,
+      "baseline_clip_cs": 0.6163833141326904
+    },
+    {
+      "pair_idx": 16,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_025.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_002.jpg",
+      "baseline_dinov2_l2": 36.878482818603516,
+      "baseline_clip_cs": 0.6186169385910034
+    },
+    {
+      "pair_idx": 17,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_002.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_039.jpg",
+      "baseline_dinov2_l2": 37.838340759277344,
+      "baseline_clip_cs": 0.5803535580635071
+    },
+    {
+      "pair_idx": 18,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_039.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_031.jpg",
+      "baseline_dinov2_l2": 36.63557434082031,
+      "baseline_clip_cs": 0.6519250273704529
+    },
+    {
+      "pair_idx": 19,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_031.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_017.jpg",
+      "baseline_dinov2_l2": 36.546356201171875,
+      "baseline_clip_cs": 0.5561186075210571
+    },
+    {
+      "pair_idx": 20,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_017.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_023.jpg",
+      "baseline_dinov2_l2": 35.951148986816406,
+      "baseline_clip_cs": 0.4566105604171753
+    },
+    {
+      "pair_idx": 21,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_023.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_049.jpg",
+      "baseline_dinov2_l2": 32.09954833984375,
+      "baseline_clip_cs": 0.657282829284668
+    },
+    {
+      "pair_idx": 22,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_049.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_004.jpg",
+      "baseline_dinov2_l2": 36.47315979003906,
+      "baseline_clip_cs": 0.6074911952018738
+    },
+    {
+      "pair_idx": 23,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_004.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_029.jpg",
+      "baseline_dinov2_l2": 38.54877471923828,
+      "baseline_clip_cs": 0.6669983863830566
+    },
+    {
+      "pair_idx": 24,
+      "path_a": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_029.jpg",
+      "path_b": "/home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/img_samples/img_035.jpg",
+      "baseline_dinov2_l2": 34.67256164550781,
+      "baseline_clip_cs": 0.685105562210083
+    }
+  ],
+  "deltas_from_baseline": {
+    "0.0": {
+      "l2": [],
+      "cs": []
+    },
+    "0.01": {
+      "l2": [
+        0.067596435546875,
+        -0.27304840087890625,
+        -0.41831207275390625,
+        0.014598846435546875,
+        0.08628082275390625,
+        -0.3170967102050781,
+        0.032268524169921875,
+        0.015674591064453125,
+        -0.5127944946289062,
+        0.08674240112304688,
+        -0.18427658081054688,
+        0.20756912231445312,
+        0.014862060546875,
+        -0.11635208129882812,
+        -0.14812088012695312,
+        -0.3004722595214844,
+        -0.16139984130859375,
+        0.047161102294921875,
+        -0.010776519775390625,
+        -0.1259307861328125,
+        -0.8776664733886719,
+        0.3158111572265625,
+        -0.9467430114746094,
+        -1.2596092224121094,
+        -0.1532440185546875
+      ],
+      "cs": [
+        -0.0795900821685791,
+        0.014956951141357422,
+        -0.011640012264251709,
+        -0.024099409580230713,
+        0.015523672103881836,
+        -0.0870351791381836,
+        -0.05320024490356445,
+        0.02082914113998413,
+        -0.03503531217575073,
+        -0.010250329971313477,
+        -0.03997766971588135,
+        -0.040570199489593506,
+        -0.03755199909210205,
+        -0.05682176351547241,
+        -0.08016568422317505,
+        -0.08324050903320312,
+        -0.058824121952056885,
+        -0.0408707857131958,
+        -0.07512390613555908,
+        -0.06666240096092224,
+        0.003480672836303711,
+        0.00045686960220336914,
+        -0.02848440408706665,
+        -0.0682559609413147,
+        -0.050919532775878906
+      ]
+    },
+    "0.05": {
+      "l2": [
+        -0.4041709899902344,
+        -1.0856132507324219,
+        -0.6530075073242188,
+        0.3577537536621094,
+        -0.21659088134765625,
+        -1.4192943572998047,
+        0.3132438659667969,
+        -0.9369163513183594,
+        -0.9307060241699219,
+        0.06122589111328125,
+        -0.8359107971191406,
+        0.24614334106445312,
+        -0.4859580993652344,
+        -0.9852256774902344,
+        -0.6607780456542969,
+        -1.2744369506835938,
+        -0.5349578857421875,
+        -0.42008209228515625,
+        0.26804351806640625,
+        -0.5465087890625,
+        -1.8319625854492188,
+        0.19446945190429688,
+        -2.2641754150390625,
+        -3.1250953674316406,
+        -0.5527534484863281
+      ],
+      "cs": [
+        -0.02696073055267334,
+        0.013397216796875,
+        0.007957279682159424,
+        0.007703006267547607,
+        0.014515072107315063,
+        -0.0870288610458374,
+        -0.04020726680755615,
+        -0.01813817024230957,
+        -0.022186100482940674,
+        0.03484302759170532,
+        -0.03525632619857788,
+        -0.031534671783447266,
+        -0.01760268211364746,
+        -0.07862555980682373,
+        -0.04744529724121094,
+        -0.047753870487213135,
+        -0.04645282030105591,
+        -0.027254462242126465,
+        -0.039784908294677734,
+        -0.020649313926696777,
+        -0.0593123733997345,
+        -0.03068232536315918,
+        0.018283724784851074,
+        -0.0925857424736023,
+        -0.028924524784088135
+      ]
+    },
+    "0.1": {
+      "l2": [
+        -1.4292411804199219,
+        -1.4478816986083984,
+        -0.6126556396484375,
+        0.21891403198242188,
+        -0.575836181640625,
+        -0.5872764587402344,
+        0.7541656494140625,
+        -1.05999755859375,
+        -2.286376953125,
+        -0.4902305603027344,
+        -3.7021713256835938,
+        -1.1762580871582031,
+        -1.0542068481445312,
+        -2.4805355072021484,
+        -1.7701988220214844,
+        -1.3704414367675781,
+        -2.0637893676757812,
+        -2.2099990844726562,
+        -0.147430419921875,
+        -1.0011749267578125,
+        -1.9527549743652344,
+        -0.416290283203125,
+        -2.073040008544922,
+        -4.684543609619141,
+        -1.1021842956542969
+      ],
+      "cs": [
+        -0.00023621320724487305,
+        0.05945146083831787,
+        0.06551891565322876,
+        0.05036741495132446,
+        0.07213544845581055,
+        -0.07892012596130371,
+        -0.0011172890663146973,
+        0.027526795864105225,
+        0.0744330883026123,
+        0.06024765968322754,
+        0.027135610580444336,
+        0.021474361419677734,
+        -0.035148024559020996,
+        -0.03691518306732178,
+        -0.050254642963409424,
+        0.006995677947998047,
+        -0.006744801998138428,
+        0.017755746841430664,
+        0.03031134605407715,
+        0.012039422988891602,
+        0.029086560010910034,
+        -0.029837608337402344,
+        0.023530900478363037,
+        -0.044233083724975586,
+        0.0031456351280212402
+      ]
+    },
+    "0.2": {
+      "l2": [
+        -3.827058792114258,
+        -3.224832534790039,
+        -1.6798820495605469,
+        -2.213836669921875,
+        -0.6703414916992188,
+        -0.4237041473388672,
+        -0.27565765380859375,
+        -3.2506980895996094,
+        -7.79541015625,
+        -2.5435523986816406,
+        -6.935857772827148,
+        -6.572319030761719,
+        -3.804027557373047,
+        -5.758922576904297,
+        -4.907785415649414,
+        -1.49151611328125,
+        -3.5750045776367188,
+        -4.944248199462891,
+        -1.4394454956054688,
+        -2.082569122314453,
+        -3.4021530151367188,
+        -3.272127151489258,
+        -4.695581436157227,
+        -7.458229064941406,
+        -2.385662078857422
+      ],
+      "cs": [
+        0.1266215443611145,
+        0.11610186100006104,
+        0.08341902494430542,
+        0.11519700288772583,
+        0.1454758644104004,
+        -0.0025588274002075195,
+        0.05650562047958374,
+        0.15904074907302856,
+        0.15318918228149414,
+        0.09537845849990845,
+        0.07444655895233154,
+        0.09854632616043091,
+        -0.005017697811126709,
+        -0.045110106468200684,
+        0.023675620555877686,
+        0.08175808191299438,
+        0.045612990856170654,
+        0.16189205646514893,
+        0.08667498826980591,
+        0.09088265895843506,
+        0.1731317639350891,
+        0.12545377016067505,
+        0.1834721565246582,
+        0.10056740045547485,
+        0.07952505350112915
+      ]
+    }
+  },
+  "monotonicity": {
+    "dinov2_l2_r": -0.9918601586707643,
+    "dinov2_l2_p": 0.00813984132923573,
+    "clip_cs_r": 0.9905362206394852,
+    "clip_cs_p": 0.00946377936051479
+  },
+  "overall_correlation": {
+    "r": -0.5267845210792492,
+    "p": 2.781661581135536e-10
+  },
+  "baseline_correlation": {
+    "r": -0.36018999802688506,
+    "p": 0.07695025568384657
+  },
+  "interpretation": {
+    "dinov2_pixel_sensitive": false,
+    "clip_pixel_sensitive": false
+  }
+}

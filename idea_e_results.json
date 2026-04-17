@@ -1,0 +1,12 @@
+{
+  "var_ratio_orig": 0.551186,
+  "var_ratio_vae": 0.56336,
+  "var_ratio_diff": -0.012175,
+  "top5_ratio_orig": 0.693994,
+  "top5_ratio_vae": 0.704203,
+  "t_statistic": 6e-06,
+  "p_value": 0.999995,
+  "n_pairs": 30,
+  "n_dims": 512,
+  "threshold_passed": false
+}

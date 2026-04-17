@@ -1,0 +1,36 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/kas/.local/lib/python3.12/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+/home/kas/.local/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Loading CLIP ViT-B/32 via open_clip...
+Loading VAE...
+Selected 30 images
+Extracting original CLIP embeddings...
+Original:   0%|          | 0/30 [00:00<?, ?it/s]Original:   3%|▎         | 1/30 [00:00<00:10,  2.88it/s]Original:   7%|▋         | 2/30 [00:00<00:07,  3.62it/s]Original:  10%|█         | 3/30 [00:00<00:05,  4.71it/s]Original:  13%|█▎        | 4/30 [00:00<00:04,  5.44it/s]Original:  17%|█▋        | 5/30 [00:00<00:04,  5.94it/s]Original:  20%|██        | 6/30 [00:01<00:03,  6.06it/s]Original:  23%|██▎       | 7/30 [00:01<00:03,  6.33it/s]Original:  27%|██▋       | 8/30 [00:01<00:03,  6.43it/s]Original:  30%|███       | 9/30 [00:01<00:03,  6.65it/s]Original:  33%|███▎      | 10/30 [00:01<00:02,  6.81it/s]Original:  37%|███▋      | 11/30 [00:01<00:02,  6.96it/s]Original:  40%|████      | 12/30 [00:01<00:02,  7.07it/s]Original:  43%|████▎     | 13/30 [00:02<00:02,  6.88it/s]Original:  47%|████▋     | 14/30 [00:02<00:02,  6.88it/s]Original:  50%|█████     | 15/30 [00:02<00:02,  6.99it/s]Original:  53%|█████▎    | 16/30 [00:02<00:01,  7.08it/s]Original:  57%|█████▋    | 17/30 [00:02<00:01,  7.18it/s]Original:  60%|██████    | 18/30 [00:02<00:01,  7.23it/s]Original:  63%|██████▎   | 19/30 [00:02<00:01,  7.27it/s]Original:  67%|██████▋   | 20/30 [00:03<00:01,  7.34it/s]Original:  70%|███████   | 21/30 [00:03<00:01,  6.97it/s]Original:  73%|███████▎  | 22/30 [00:03<00:01,  7.08it/s]Original:  77%|███████▋  | 23/30 [00:03<00:00,  7.13it/s]Original:  80%|████████  | 24/30 [00:03<00:00,  7.24it/s]Original:  83%|████████▎ | 25/30 [00:03<00:00,  7.29it/s]Original:  87%|████████▋ | 26/30 [00:03<00:00,  7.29it/s]Original:  90%|█████████ | 27/30 [00:04<00:00,  7.36it/s]Original:  93%|█████████▎| 28/30 [00:04<00:00,  7.20it/s]Original:  97%|█████████▋| 29/30 [00:04<00:00,  7.26it/s]Original: 100%|██████████| 30/30 [00:04<00:00,  7.29it/s]Original: 100%|██████████| 30/30 [00:04<00:00,  6.67it/s]
+Original embeddings shape: (30, 512)
+Extracting VAE roundtrip CLIP embeddings...
+VAE roundtrip:   0%|          | 0/30 [00:00<?, ?it/s]VAE roundtrip:   3%|▎         | 1/30 [00:41<20:04, 41.52s/it]VAE roundtrip:   7%|▋         | 2/30 [01:20<18:40, 40.01s/it]VAE roundtrip:  10%|█         | 3/30 [01:58<17:41, 39.32s/it]VAE roundtrip:  13%|█▎        | 4/30 [02:39<17:13, 39.73s/it]VAE roundtrip:  17%|█▋        | 5/30 [03:18<16:24, 39.40s/it]VAE roundtrip:  20%|██        | 6/30 [03:56<15:39, 39.16s/it]VAE roundtrip:  23%|██▎       | 7/30 [04:35<14:58, 39.05s/it]VAE roundtrip:  27%|██▋       | 8/30 [05:15<14:22, 39.22s/it]VAE roundtrip:  30%|███       | 9/30 [05:53<13:38, 38.98s/it]VAE roundtrip:  33%|███▎      | 10/30 [06:32<12:56, 38.82s/it]VAE roundtrip:  37%|███▋      | 11/30 [07:11<12:21, 39.03s/it]VAE roundtrip:  40%|████      | 12/30 [07:50<11:43, 39.07s/it]VAE roundtrip:  43%|████▎     | 13/30 [08:30<11:06, 39.21s/it]VAE roundtrip:  47%|████▋     | 14/30 [09:10<10:29, 39.37s/it]VAE roundtrip:  50%|█████     | 15/30 [09:49<09:50, 39.39s/it]VAE roundtrip:  53%|█████▎    | 16/30 [10:27<09:06, 39.04s/it]VAE roundtrip:  57%|█████▋    | 17/30 [11:06<08:25, 38.85s/it]VAE roundtrip:  60%|██████    | 18/30 [11:44<07:43, 38.64s/it]VAE roundtrip:  63%|██████▎   | 19/30 [12:22<07:04, 38.55s/it]VAE roundtrip:  67%|██████▋   | 20/30 [13:00<06:24, 38.46s/it]VAE roundtrip:  70%|███████   | 21/30 [13:39<05:46, 38.54s/it]VAE roundtrip:  73%|███████▎  | 22/30 [14:17<05:07, 38.47s/it]VAE roundtrip:  77%|███████▋  | 23/30 [14:56<04:29, 38.47s/it]VAE roundtrip:  80%|████████  | 24/30 [15:34<03:50, 38.49s/it]VAE roundtrip:  83%|████████▎ | 25/30 [16:13<03:12, 38.47s/it]VAE roundtrip:  87%|████████▋ | 26/30 [16:51<02:33, 38.39s/it]VAE roundtrip:  90%|█████████ | 27/30 [17:30<01:55, 38.46s/it]VAE roundtrip:  93%|█████████▎| 28/30 [18:08<01:16, 38.45s/it]VAE roundtrip:  97%|█████████▋| 29/30 [18:46<00:38, 38.36s/it]VAE roundtrip: 100%|██████████| 30/30 [19:25<00:00, 38.44s/it]VAE roundtrip: 100%|██████████| 30/30 [19:25<00:00, 38.85s/it]
+VAE embeddings shape: (30, 512)
+
+Original:   λ_1/Σλ = 0.551186
+VAE:        λ_1/Σλ = 0.563360
+Difference: -0.012175
+
+Paired t-test on first PC projections:
+  t = 0.0000, p = 0.999995
+
+Results written to /home/kas/.openclaw/workspace-domain/research/autonomous-research-window-0417-pm/idea_e_results.json
+{
+  "var_ratio_orig": 0.551186,
+  "var_ratio_vae": 0.56336,
+  "var_ratio_diff": -0.012175,
+  "top5_ratio_orig": 0.693994,
+  "top5_ratio_vae": 0.704203,
+  "t_statistic": 6e-06,
+  "p_value": 0.999995,
+  "n_pairs": 30,
+  "n_dims": 512,
+  "threshold_passed": false
+}
