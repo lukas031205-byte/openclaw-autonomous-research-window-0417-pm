@@ -1,0 +1,8 @@
+{
+  "pearson_r": -0.897312,
+  "spearman_rho": -0.914842,
+  "p_value": 0.0,
+  "n_frames": 250,
+  "partial_r": -0.898074,
+  "threshold_passed": true
+}
