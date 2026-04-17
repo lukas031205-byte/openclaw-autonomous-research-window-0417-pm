@@ -1,0 +1,69 @@
+{
+  "n_pairs": 500,
+  "dataset": "50 COCO val2017 images × 10 augmentations = 500 pairs",
+  "metrics": {
+    "dino_l2": {
+      "description": "L2 distance between DINOv2 ViT-S/14 features of original and decoded",
+      "mean": 0.3083,
+      "std": 0.2242,
+      "min": 0.0,
+      "max": 1.157
+    },
+    "clip_l2": {
+      "description": "L2 distance between CLIP ViT-B/32 features of original and decoded",
+      "mean": 0.4401,
+      "std": 0.1384,
+      "min": 0.062,
+      "max": 0.787
+    },
+    "dino_cs": {
+      "description": "Cosine similarity of DINOv2 features between original and decoded",
+      "mean": 0.9273,
+      "std": 0.0848,
+      "min": 0.3307,
+      "max": 1.000
+    },
+    "clip_cs": {
+      "description": "Cosine similarity of CLIP features between original and decoded",
+      "mean": 0.8936,
+      "std": 0.0609,
+      "min": 0.6906,
+      "max": 0.998
+    }
+  },
+  "correlations": {
+    "r_dinoL2_invClipCS": {
+      "description": "Pearson r between DINOv2 L2 drift and 1 - CLIP cosine similarity",
+      "r": 0.5714,
+      "p": 1.12e-44,
+      "significant": true,
+      "pass_threshold": false
+    },
+    "r_clipL2_invDinoCS": {
+      "description": "Pearson r between CLIP L2 drift and 1 - DINOv2 cosine similarity",
+      "r": 0.4946,
+      "p": 3.32e-32,
+      "significant": true,
+      "pass_threshold": true
+    }
+  },
+  "effect_size": {
+    "cohens_d_l2": {
+      "description": "Cohen's d: DINO_L2 mean minus CLIP_L2 mean / pooled SD",
+      "value": -0.7071,
+      "interpretation": "CLIP L2 drift is ~0.71 SD larger than DINOv2 L2 drift"
+    },
+    "cohens_d_cs": {
+      "description": "Cohen's d on 1-CS (drift magnitude via cosine): DINO vs CLIP",
+      "value": -0.4572,
+      "interpretation": "CLIP cosine drift is ~0.46 SD larger than DINOv2 cosine drift"
+    }
+  },
+  "pass_fail": {
+    "r_dinoL2_invClipCS": "FAIL",
+    "r_clipL2_invDinoCS": "PASS",
+    "both_below_0.5": false,
+    "both_significant_p001": true,
+    "both_same_direction": true
+  }
+}

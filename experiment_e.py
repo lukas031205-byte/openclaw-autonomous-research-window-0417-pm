@@ -9,10 +9,12 @@ import json
 import random
 import numpy as np
 import torch
-from transformers import AutoImageProcessor, AutoModel
 from PIL import Image
 from scipy.stats import ttest_rel
 from tqdm import tqdm
+import open_clip
+from open_clip import tokenize as clip_tokenize
+from diffusers import AutoencoderKL
 
 # Paths
 COCO_VAL2017 = "/home/kas/.cache/huggingface/hub/datasets--merve--coco/snapshots/9e50abcdc1361852f34841af4939cbcd2d37c92f/val2017"
@@ -29,33 +31,32 @@ torch.manual_seed(SEED)
 
 device = "cpu"
 
-# Load CLIP
-print("Loading CLIP ViT-B/32...")
-clip_processor = AutoImageProcessor.from_pretrained("openai/clip-vit-base-patch32")
-clip_model = AutoModel.from_pretrained("openai/clip-vit-base-patch32").eval().to(device)
+# Load CLIP via open_clip
+print("Loading CLIP ViT-B/32 via open_clip...")
+clip_model, _, clip_preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='openai')
+clip_model.eval()
+clip_model.to(device)
 
-# Load VAE (for encode-decode roundtrip)
+# Load VAE
 print("Loading VAE...")
-from diffusers import AutoencoderKL
 vae = AutoencoderKL.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", subfolder="vae", torch_dtype=torch.float32)
 vae = vae.to(device).eval()
 
-def get_clip_embedding(img):
+def get_clip_embedding(img_pil):
+    """Extract CLIP [CLS] embedding via open_clip."""
+    x = clip_preprocess(img_pil).unsqueeze(0).to(device)
     with torch.no_grad():
-        inputs = clip_processor(images=img, return_tensors="pt").to(device)
-        outputs = clip_model(**inputs)
-        emb = outputs.last_hidden_state[:, 0, :].squeeze().cpu().numpy()
+        emb = clip_model.encode_image(x).squeeze().cpu().numpy()
     return emb
 
-def vae_roundtrip(img):
-    """Encode img to latents, decode back to image."""
-    # Convert PIL to tensor [0,1]
+def vae_roundtrip(img_pil):
+    """Encode PIL image to latents, decode back to image."""
+    # Resize to 512x512 for SDXL VAE
+    img = img_pil.resize((512, 512), Image.LANCZOS)
     img_tensor = torch.from_numpy(np.array(img).astype(np.float32) / 255.0).permute(2, 0, 1).unsqueeze(0).to(device)
-    # VAE expects 0-1, normalize to [-1,1] if needed, SDXL VAE expects 0-1
     with torch.no_grad():
         latents = vae.encode(img_tensor).latent_dist.sample()
         decoded = vae.decode(latents).sample
-    # Convert back to PIL
     decoded = decoded.squeeze().permute(1, 2, 0).cpu().numpy()
     decoded = np.clip(decoded * 255, 0, 255).astype(np.uint8)
     return Image.fromarray(decoded)
